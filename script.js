@@ -1,4 +1,3 @@
-//your JS code here. If required.
 const form = document.querySelector("form");
 
 const fontSizeInput = document.getElementById("fontsize");
@@ -32,8 +31,7 @@ function loadSettings() {
 }
 
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault()
+form.addEventListener("submit", () => {
     const fontSize = fontSizeInput.value;
     const fontColor = fontColorInput.value;
 
@@ -43,12 +41,12 @@ form.addEventListener("submit", (event) => {
 
     // Apply immediately
     document.documentElement.style.setProperty(
-        "--fontsize",
+        "--font-size",
         `${fontSize}px`
     );
 
     document.documentElement.style.setProperty(
-        "--fontcolor",
+        "--font-color",
         fontColor
     );
 });
